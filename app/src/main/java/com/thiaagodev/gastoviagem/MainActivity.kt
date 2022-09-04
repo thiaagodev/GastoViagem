@@ -2,9 +2,11 @@ package com.thiaagodev.gastoviagem
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import android.view.View
+import android.widget.Toast
 import com.thiaagodev.gastoviagem.databinding.ActivityMainBinding
 
-class MainActivity : AppCompatActivity() {
+class MainActivity : AppCompatActivity(), View.OnClickListener {
 
     private lateinit var binding: ActivityMainBinding
 
@@ -13,9 +15,36 @@ class MainActivity : AppCompatActivity() {
         binding = ActivityMainBinding.inflate(layoutInflater)
         setContentView(binding.root)
 
+        binding.btnCalculate.setOnClickListener(this)
+
+    }
+
+    override fun onClick(view: View) {
+        if (view.id == R.id.btn_calculate) {
+            calculate()
+        }
+    }
+
+    private fun isvalid(): Boolean {
+        return (binding.editDistance.text.toString() != ""
+                && binding.editPrice.text.toString() != ""
+                && binding.editAutonomy.text.toString() != ""
+                && binding.editAutonomy.text.toString().toFloat() > 0f)
     }
 
     private fun calculate() {
+
+        if (!this.isvalid()) {
+            return Toast.makeText(this, R.string.validation_fill_all_fields, Toast.LENGTH_SHORT).show()
+        }
+
+        val distance = binding.editDistance.text.toString().toFloat()
+        val price = binding.editPrice.text.toString().toFloat()
+        val autonomy = binding.editAutonomy.text.toString().toFloat()
+
+        val totalValue = (distance * price) / autonomy
+
+        binding.textTotalValue.text = "R$ ${"%.2f".format(totalValue)}"
 
     }
 }
