@@ -71,7 +71,7 @@
         android:layout_gravity="center"
         android:layout_marginTop="16dp"
         android:text="@string/total_value"
-        android:textColor="@color/purple_700"
+        android:textColor="@color/black"
         android:textSize="32sp"
         android:textStyle="bold" />
 
@@ -82,7 +82,7 @@
         android:layout_gravity="center"
         android:layout_marginHorizontal="32dp"
         android:layout_marginTop="32dp"
-        android:backgroundTint="@color/teal_200"
+        android:backgroundTint="#00BCD4"
         android:padding="8dp"
         android:text="@string/calculate"
         android:textSize="24sp"
