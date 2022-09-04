@@ -9,10 +9,11 @@
     tools:context=".MainActivity">
 
     <EditText
+        android:id="@+id/edit_distance"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginTop="16dp"
-        android:hint="@string/distancia"
+        android:hint="@string/distance"
         android:inputType="numberDecimal"
         android:textSize="16sp" />
 
@@ -24,25 +25,27 @@
         android:text="@string/total_km" />
 
     <EditText
+        android:id="@+id/edit_price"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginTop="32dp"
-        android:hint="@string/preco"
+        android:hint="@string/price"
         android:inputType="numberDecimal"
         android:textSize="16sp" />
 
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="2dp"
         android:layout_gravity="center"
-        android:text="@string/preco_por_litro" />
+        android:layout_marginTop="2dp"
+        android:text="@string/price_per_liter" />
 
     <EditText
+        android:id="@+id/edit_autonomy"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginTop="32dp"
-        android:hint="@string/autonomia"
+        android:hint="@string/autonomy"
         android:inputType="numberDecimal"
         android:textSize="16sp" />
 
@@ -51,27 +54,29 @@
         android:layout_height="wrap_content"
         android:layout_gravity="center"
         android:layout_marginTop="2dp"
-        android:text="@string/kms_por_litro" />
+        android:text="@string/kms_per_liter" />
 
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_gravity="center"
         android:layout_marginTop="64dp"
-        android:text="@string/total_gasto"
+        android:text="@string/total_spend"
         android:textSize="20sp" />
 
     <TextView
+        android:id="@+id/text_total_value"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_gravity="center"
         android:layout_marginTop="16dp"
-        android:text="@string/valor_total"
+        android:text="@string/total_value"
         android:textColor="@color/purple_700"
         android:textSize="32sp"
         android:textStyle="bold" />
 
     <Button
+        android:id="@+id/btn_calculate"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_gravity="center"
@@ -79,7 +84,7 @@
         android:layout_marginTop="32dp"
         android:backgroundTint="@color/teal_200"
         android:padding="8dp"
-        android:text="@string/calcular"
+        android:text="@string/calculate"
         android:textSize="24sp"
         android:textStyle="bold" />
 
